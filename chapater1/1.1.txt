@@ -1,0 +1,70 @@
+The Elements of Programming
+------------------------------
+
+Powerful language has three mechanisms:
+
+> Primitive expressions, which respresent the simplest entities the language is concerned with,
+
+>Means of combination, by which compound elements are build from simpler ones,
+and
+
+>Means of abstraction, by which compound elements can be named and manipulated  as units.
+
+In C programming, we deal with two kinds of elements:
+
+>Procedures and
+>Data
+	Informally, data is "stuff" that we want to manipulate, and procedures are descriptions of the rules for manuipulating the data.
+	Thus C programming language should be able to descibe primitive data and primitive procedures and should have methods for combining and abstracting procedures and data.
+	In this chapter we will deal only with simple numerical data so that we can focus on the rules for building procedures. In later chapters we will see that these same rules allow us to build procedures to manipulate compound data as well.
+--------------------------------------------------------------------------------
+
+Primitive datas in C programming language are:
+
+> Integer data( int, char )
+> Floating point data( float, double ).
+
+Primitive procedures in C programming language are:
+>Based on number of operands operating on operators
+	1. Unary
+	2. Binary and
+	3. Ternary
+>Based on the type of operations performed on operators
+	1. Arithmetic( +, -, *, /, % )
+	2. Relational( <, >, <=, >=, ==, != )
+	3. Logical( !, &&, || )
+	4. Bitwise( &, |, ^, <<, >>, ~ )
+	5. Conditional( ?: )
+	6. Compound( +=, -=, *=, /=, <<=, >>=, etc...)
+	7. Increment/Decrement( ++, -- )
+	8. Comma( , )
+	9. Sizeof --the complie time operator
+--------------------------------------------------------------------------------In Lisp programming language we cominbe primitive data and procedure like this
+( + 137 349 )--->refer page number 8
+here parentheses delimit the combination
+
+In C programming language we do same like this
+137 + 349;
+but here semicolon delimit the combination
+Evaluation of combination takes place according to the precedence and order of evaluation
+--------------------------------------------------------------------------------In LisP
+(define size 2)
+these a definition and is a simple means of abstraction where we are abstractingprimitive data by give a name size so whenever we need value 2 we can use size name
+name identifies a (variable) whose value is the (object)
+
+In C
+	int 		size 	= 	2;
+	 |   	       	|     		|
+ 	data type	identifier	value
+
+here name identifies a (variable) whose (value and type) is the (object) 
+--------------------------------------------------------------------------------Compound Procedures
+In LisP
+(define (square x) ( * x x )
+
+In C
+	int	square( int x )
+	{
+		x = x * x;
+		return x;
+	}
